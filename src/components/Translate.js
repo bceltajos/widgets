@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Dropdown from './Dropdown';
+import Converter from './Converter';
 
 const API_KEY = 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM';
 
@@ -39,6 +40,15 @@ const Translate = () => {
                 options={options}
                 selected={language}
                 onSelectedChange={setLanguage} />
+
+            <hr />
+
+            <h3 className='ui header'>Output</h3>
+
+            <Converter
+                text={text}
+                language={language} />
+
         </div>
     );
 }
